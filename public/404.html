@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Keep Android Open</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b1023">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .nf-wrap { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem; }
+    .nf-card { max-width: 560px; }
+    .nf-code {
+      font-size: clamp(4.5rem, 18vw, 9rem); font-weight: 900; line-height: 1; letter-spacing: -.04em;
+      color: transparent; background: var(--grad-text); -webkit-background-clip: text; background-clip: text;
+    }
+    .nf-card h1 { font-size: clamp(1.4rem, 4vw, 2rem); margin: .6rem 0 .8rem; }
+    .nf-card p { color: var(--ink-soft); margin: 0 auto 1.6rem; max-width: 42ch; }
+    .nf-actions { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
+  </style>
+</head>
+<body>
+  <main class="nf-wrap">
+    <div class="glass nf-card" style="padding: clamp(2rem, 6vw, 3.5rem)">
+      <div class="nf-code">404</div>
+      <h1 data-i18n="nf.title">This page could not be found</h1>
+      <p data-i18n="nf.text">The link may be broken or the page may have moved. Let's get you back to the campaign.</p>
+      <div class="nf-actions">
+        <a href="/" class="btn btn-primary" data-i18n="nf.home">Back to home</a>
+        <a href="/#support" class="btn btn-ghost" data-i18n="nf.support">Support the campaign</a>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var lang = ((navigator.language || "en").toLowerCase().indexOf("id") === 0) ? "id" : "en";
+      var DICT = {
+        id: {
+          "nf.title": "Halaman tidak ditemukan",
+          "nf.text": "Tautannya mungkin rusak atau halamannya sudah dipindahkan. Yuk kembali ke kampanye.",
+          "nf.home": "Kembali ke beranda",
+          "nf.support": "Dukung kampanye"
+        }
+      };
+      document.documentElement.setAttribute("lang", lang);
+      if (DICT[lang]) {
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n");
+          if (DICT[lang][k]) el.textContent = DICT[lang][k];
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -183,10 +183,12 @@ app.use(
   })
 );
 
-// SPA-style fallback for any non-API route.
-app.get("*", (req, res, next) => {
-  if (req.path.startsWith("/api/")) return next();
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+// Unknown routes -> 404 page (real 404 status).
+app.use((req, res) => {
+  if (req.path.startsWith("/api/")) {
+    return res.status(404).json({ error: "Not found." });
+  }
+  res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
 });
 
 app.listen(PORT, () => {
