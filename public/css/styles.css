@@ -488,7 +488,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; color: var(--ink); f
 .amount-custom::-webkit-outer-spin-button, .amount-custom::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .amount-custom::placeholder { color: var(--ink-dim); font-weight: 500; }
 .amount-custom:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
-.paypal-buttons { width: 100%; max-width: 340px; margin: .4rem auto 0; min-height: 46px; }
+.paypal-buttons { width: 100%; max-width: 100%; margin: .4rem auto 0; min-height: 46px; }
 .paypal-buttons:empty { min-height: 0; }
 /* Advanced hosted card fields — wrapped in our own dark boxes */
 .card-fields { max-width: 340px; margin: 0 auto; text-align: start; }

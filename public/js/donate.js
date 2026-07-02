@@ -145,7 +145,7 @@
         "https://www.paypal.com/sdk/js?client-id=" +
           encodeURIComponent(cfg.clientId) +
           "&currency=" + encodeURIComponent(currency) +
-          "&intent=capture&components=buttons,card-fields&disable-funding=paylater,card"
+          "&intent=capture&components=buttons,card-fields&disable-funding=paylater"
       );
     } catch (e) {
       return showFallback();
