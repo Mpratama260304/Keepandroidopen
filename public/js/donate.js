@@ -101,7 +101,7 @@
     custom.step = "1";
     custom.className = "amount-custom";
     custom.setAttribute("aria-label", t("custom"));
-    custom.placeholder = t("custom");
+    custom.placeholder = t("custom") + " " + (CURRENCY_SYMBOLS[currency] || currency);
     custom.addEventListener("input", function () {
       var v = parseFloat(custom.value);
       if (Number.isFinite(v) && v > 0) {

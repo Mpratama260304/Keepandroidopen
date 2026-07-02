@@ -657,7 +657,9 @@
 
     /* ---------- Reveal on scroll ---------- */
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var items = document.querySelectorAll(".section");
+    // Exclude #support: PayPal buttons use position:fixed iframes that break
+    // (get clipped) inside a CSS-transformed ancestor.
+    var items = document.querySelectorAll(".section:not(#support)");
     items.forEach(function (el) { el.classList.add("reveal"); });
     if (reduce || !("IntersectionObserver" in window)) {
       items.forEach(function (el) { el.classList.add("in"); });
