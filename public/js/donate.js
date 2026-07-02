@@ -122,7 +122,7 @@
         "https://www.paypal.com/sdk/js?client-id=" +
           encodeURIComponent(cfg.clientId) +
           "&currency=" + encodeURIComponent(currency) +
-          "&intent=capture&components=buttons&disable-funding=paylater"
+          "&intent=capture&components=buttons&disable-funding=paylater,card"
       );
     } catch (e) {
       return showFallback();
@@ -131,7 +131,7 @@
 
     window.paypal
       .Buttons({
-        style: { shape: "pill", color: "blue", layout: "vertical", label: "donate", height: 45 },
+        style: { shape: "pill", color: "gold", layout: "vertical", label: "paypal", height: 48 },
         createOrder: async function () {
           setStatus("");
           var res = await fetch("/api/orders", {
