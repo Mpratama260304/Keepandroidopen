@@ -498,14 +498,14 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; color: var(--ink); f
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  padding: 0 .6rem;
-  height: 46px;
+  padding: .25rem .7rem;
   margin-bottom: .7rem;
-  display: flex;
-  align-items: center;
+  overflow: visible;
   transition: border-color var(--t), box-shadow var(--t);
 }
 .cf-field:focus-within { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(34,211,238,.25); }
+/* Let PayPal's field iframe define its own height so it is never clipped */
+#cardFields iframe { width: 100% !important; height: 42px !important; min-height: 42px !important; display: block; }
 .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
 .cf-submit { width: 100%; margin-top: .3rem; }
 .donate-status { margin-top: .9rem; min-height: 1.2em; font-weight: 700; color: var(--green); }
