@@ -305,11 +305,12 @@
         <div class="glass donate-card donate-paypal">
           <h3 data-i18n="support.pp.h">Donate with PayPal <span class="donate-badge" data-i18n="support.recommended">Recommended</span></h3>
           <p data-i18n="support.pp.p">Support this independent campaign securely through PayPal. Every contribution helps keep the message visible.</p>
-          <form class="paypal-form" action="https://www.paypal.com/ncp/payment/ZGXXNZAWMARAU" method="post" target="_blank" rel="noopener">
-            <button class="btn btn-primary" type="submit" data-i18n="support.pp.btn">Donate with PayPal</button>
-            <img class="paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Cards accepted" loading="lazy">
-            <small class="paypal-powered">Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" loading="lazy"></small>
-          </form>
+          <div class="donate-amounts" id="donateAmounts" hidden></div>
+          <div id="paypal-buttons" class="paypal-buttons"></div>
+          <p class="donate-status" id="donateStatus" role="status" aria-live="polite"></p>
+          <p class="paypal-fallback" id="paypalFallback" hidden>
+            <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/ZGXXNZAWMARAU" target="_blank" rel="noopener" data-i18n="support.pp.btn">Donate with PayPal</a>
+          </p>
         </div>
 
         <!-- QRIS card (shown for Indonesian) -->
@@ -668,5 +669,6 @@
     }
   })();
   </script>
+  <script src="js/donate.js" defer></script>
 </body>
 </html>

@@ -472,11 +472,22 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; color: var(--ink); f
 .qris-frame img { width: 100%; height: 100%; object-fit: contain; }
 .qris-ph { color: #475569; font-weight: 600; font-size: .9rem; padding: 1rem; }
 .paypal-embed { margin-top: 1.2rem; padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--line); background: var(--glass); min-height: 56px; display: grid; place-items: center; color: var(--ink-dim); font-size: .82rem; }
-.paypal-form { display: grid; justify-items: center; gap: .7rem; margin-top: .4rem; }
-.paypal-form .btn { width: 100%; max-width: 320px; }
-.paypal-cards { height: 24px; opacity: .95; }
-.paypal-powered { display: inline-flex; align-items: center; gap: .35rem; color: var(--ink-dim); font-size: .78rem; }
-.paypal-powered img { height: 14px; vertical-align: middle; }
+.donate-amounts { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin: 1.2rem 0 1rem; }
+.amount-chip {
+  padding: .55rem 1rem; border-radius: 999px; font-weight: 700; font-size: .95rem; cursor: pointer;
+  color: var(--ink); background: var(--glass); border: 1px solid var(--line);
+  transition: transform var(--t), background var(--t), border-color var(--t), color var(--t);
+}
+.amount-chip:hover { transform: translateY(-1px); border-color: var(--line-glow); }
+.amount-chip.active { color: #fff; background: var(--grad-cta); border-color: transparent; }
+.amount-custom {
+  width: 110px; padding: .55rem .9rem; border-radius: 999px; font-weight: 600; text-align: center;
+  color: var(--ink); background: var(--glass); border: 1px solid var(--line); font-family: inherit; font-size: .95rem;
+}
+.amount-custom:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.paypal-buttons { max-width: 320px; margin: 0 auto; }
+.donate-status { margin-top: .8rem; min-height: 1.2em; font-weight: 600; color: var(--green); }
+.paypal-fallback { margin-top: 1rem; }
 [data-donate="paypal"] .donate-qris { display: none; }
 [data-donate="qris"] .donate-paypal { display: none; }
 

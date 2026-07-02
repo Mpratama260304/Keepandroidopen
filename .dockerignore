@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+Dockerfile
+.dockerignore
+saveweb2zip-com-keepandroidopen-org.zip
+IMG_20260702_080415_239.jpeg

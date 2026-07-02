@@ -1,4 +1,13 @@
-# Source archive / raw upload (not needed for the deployed static site)
+# Node
+node_modules/
+npm-debug.log*
+
+# Secrets — never commit real credentials
+.env
+.env.local
+.env.*.local
+
+# Source archive / raw upload (not needed for deploy)
 saveweb2zip-com-keepandroidopen-org.zip
 IMG_20260702_080415_239.jpeg
 

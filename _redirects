@@ -1,3 +1,0 @@
-# Cloudflare Pages: serve the single-page site for any unmatched path
-# (prevents 404s on the deployed domain). Real assets are served directly.
-/*    /index.html    200
