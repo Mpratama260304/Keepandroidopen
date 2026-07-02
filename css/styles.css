@@ -472,6 +472,11 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; color: var(--ink); f
 .qris-frame img { width: 100%; height: 100%; object-fit: contain; }
 .qris-ph { color: #475569; font-weight: 600; font-size: .9rem; padding: 1rem; }
 .paypal-embed { margin-top: 1.2rem; padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--line); background: var(--glass); min-height: 56px; display: grid; place-items: center; color: var(--ink-dim); font-size: .82rem; }
+.paypal-form { display: grid; justify-items: center; gap: .7rem; margin-top: .4rem; }
+.paypal-form .btn { width: 100%; max-width: 320px; }
+.paypal-cards { height: 24px; opacity: .95; }
+.paypal-powered { display: inline-flex; align-items: center; gap: .35rem; color: var(--ink-dim); font-size: .78rem; }
+.paypal-powered img { height: 14px; vertical-align: middle; }
 [data-donate="paypal"] .donate-qris { display: none; }
 [data-donate="qris"] .donate-paypal { display: none; }
 
