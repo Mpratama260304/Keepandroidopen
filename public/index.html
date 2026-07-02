@@ -307,6 +307,15 @@
           <p data-i18n="support.pp.p">Support this independent campaign securely through PayPal. Every contribution helps keep the message visible.</p>
           <div class="donate-amounts" id="donateAmounts" hidden></div>
           <div id="paypal-buttons" class="paypal-buttons"></div>
+          <div class="card-fields" id="cardFields" hidden>
+            <div class="cf-sep"><span>or pay by card</span></div>
+            <div class="cf-field" id="card-number"></div>
+            <div class="cf-row">
+              <div class="cf-field" id="card-expiry"></div>
+              <div class="cf-field" id="card-cvv"></div>
+            </div>
+            <button class="btn btn-primary cf-submit" id="cardSubmit" type="button">Pay by card</button>
+          </div>
           <p class="donate-status" id="donateStatus" role="status" aria-live="polite"></p>
           <p class="paypal-fallback" id="paypalFallback" hidden>
             <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/ZGXXNZAWMARAU" target="_blank" rel="noopener" data-i18n="support.pp.btn">Donate with PayPal</a>

@@ -490,6 +490,24 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; color: var(--ink); f
 .amount-custom:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 .paypal-buttons { width: 100%; max-width: 340px; margin: .4rem auto 0; min-height: 46px; }
 .paypal-buttons:empty { min-height: 0; }
+/* Advanced hosted card fields — wrapped in our own dark boxes */
+.card-fields { max-width: 340px; margin: 0 auto; text-align: start; }
+.cf-sep { display: flex; align-items: center; gap: .8rem; margin: 1.3rem 0 1rem; color: var(--ink-dim); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+.cf-sep::before, .cf-sep::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.cf-field {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0 .6rem;
+  height: 46px;
+  margin-bottom: .7rem;
+  display: flex;
+  align-items: center;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.cf-field:focus-within { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(34,211,238,.25); }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.cf-submit { width: 100%; margin-top: .3rem; }
 .donate-status { margin-top: .9rem; min-height: 1.2em; font-weight: 700; color: var(--green); }
 .paypal-fallback { margin-top: 1rem; }
 [data-donate="paypal"] .donate-qris { display: none; }
